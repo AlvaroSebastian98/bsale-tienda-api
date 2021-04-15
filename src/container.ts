@@ -8,7 +8,7 @@ import { ProductMySQLRepository } from './services/repositories/mysql/product.re
 import { CategoryService } from './services/category.service';
 import { ProductService } from './services/product.service';
 
-export default (app: Application) => {
+export default (app: Application): void => {
     const container = createContainer({
         injectionMode: "CLASSIC"
     });

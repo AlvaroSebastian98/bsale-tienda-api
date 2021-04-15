@@ -13,8 +13,9 @@ export default class App {
 
     constructor() {
         this.app = express();
-        this.execute();
         this.extension = process.env.NODE_ENV === 'production' ? 'js' : 'ts';
+
+        this.execute();
     }
 
     private middlewares() {
