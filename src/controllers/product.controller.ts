@@ -11,6 +11,20 @@ export class ProductController extends BaseController {
         super();
     }
 
+    @GET()
+    public async getAll(req: Request, res: Response) {
+        try {
+            const products = await this.productService.getAll();
+            res.json({
+                success: true,
+                data: products,
+                count: products?.length
+            });
+        } catch (error) {
+            this.handleException(error, res);
+        }
+    }
+
     @POST()
     public async getByCategory(req: Request, res: Response) {
         try {
