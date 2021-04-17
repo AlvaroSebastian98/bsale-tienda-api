@@ -13,19 +13,31 @@ export class ProductService {
         private readonly productRepository: ProductRepository
     ) {}
 
-    public async getAll(): Promise<Product[]> {
-        return await this.productRepository.getAll();
+    public async getAll(pageNumber: number): Promise<Product[]> {
+        return await this.productRepository.getAll(pageNumber);
     }
 
-    public async getByCategory(categoryId: number): Promise<Product[] | null> {
+    public async getByCategory(pageNumber: number, categoryId: number): Promise<Product[] | null> {
         const category = await this.categoryRepository.findById(categoryId);
         if(!category) throw new ApplicationException('Non-existent category');
 
-        return await this.productRepository.getByCategory(categoryId);
+        return await this.productRepository.getByCategory(pageNumber, categoryId);
     }
 
-    public async findByName(name: string): Promise<Product[] | null> {
-        return await this.productRepository.findByName(name);
+    public async findByName(pageNumber: number, name: string): Promise<Product[] | null> {
+        return await this.productRepository.findByName(pageNumber, name);
+    }
+
+    public async countAll(): Promise<number> {
+        return await this.productRepository.countAll();
+    }
+
+    public async countByCategory(categoryId: number): Promise<number> {
+        return await this.productRepository.countByCategory(categoryId);
+    }
+
+    public async countByName(name: string): Promise<number> {
+        return await this.productRepository.countByName(name);
     }
 
 }
