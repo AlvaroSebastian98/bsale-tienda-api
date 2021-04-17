@@ -12,12 +12,6 @@ export class ProductMySQLRepository implements ProductRepository {
             'SELECT * FROM product ORDER BY id DESC LIMIT ?, ?', [offset, limit]
         );
 
-        const [total]: any[] = await connector.execute(
-            'SELECT COUNT(id) FROM product'
-        );
-
-        console.log('TOTAL', total[0]['COUNT(id)']);
-
         return rows as Product[];
     }
 
