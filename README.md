@@ -39,9 +39,9 @@ _Las principales herramientas de desarrollo fueron_
 
 | Tools |  |
 | ------ | ------ |
-| [NodeJS](http://www.dropwizard.io/1.0.2/docs/) | El entorno de ejecución |
-| [Express](http://www.dropwizard.io/1.0.2/docs/) | El framework en el lado del servidor |
-| [NPM](https://maven.apache.org/) | Manejador de dependencias |
-| [TypeScript](https://rometools.github.io/rome/) | Usado para implementar tipos e interfaces a JS
-| [mysql2](https://rometools.github.io/rome/) | Librería para consumir la base de datos
+| [NodeJS](https://nodejs.org) | El entorno de ejecución |
+| [Express](https://expressjs.com/es/) | El framework en el lado del servidor |
+| [NPM](https://www.npmjs.com/) | Manejador de dependencias |
+| [TypeScript](https://www.typescriptlang.org/) | Usado para implementar tipos e interfaces a JS
+| [mysql2](https://www.npmjs.com/package/mysql2) | Librería para consumir la base de datos
 
