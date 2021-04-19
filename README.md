@@ -3,6 +3,7 @@
 
 ## Ejercicio de postulación
 _REST API que lista productos filtrados por categoría y nombre retornando un JSON por cada consulta._
+
 _El cliente que trabaja con este servicio se encuentra en este [repositorio](https://github.com/AlvaroSebastian98/bsale-tienda-web)._
 
 ## Comenzando 🚀
